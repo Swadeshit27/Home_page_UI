@@ -28,6 +28,7 @@ const Discover = () => {
                         <div
                             className={`w-full flex max-lg:flex-col max-lg:h-auto h-[38rem] my-12 ${isReverse ? "flex-row-reverse" : ""
                                 }`}
+                            key={i}
                         >
                             <MotionConfig transition={{ duration: 0.5, ease: "backInOut" }}>
                                 <div className="w-full sm:w-4/5 mx-auto lg:w-[50%] h-full py-8">
