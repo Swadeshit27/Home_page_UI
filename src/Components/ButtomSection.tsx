@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Subheader from './Subheader'
 import { motion } from "framer-motion"
 
@@ -12,7 +12,6 @@ const ButtomSection = () => {
                     <div className="lg:w-[35%] mx-auto flex items-center justify-center">
                         <motion.button whileHover={{ scale: 1.1 }} transition={{ duration: 0.3, ease: "linear" }} className="px-10 py-4  rounded-xl bg-[rgb(46,46,46)] text-white font-semibold my-8">Get stated, it's free</motion.button>
                     </div>
-
                     <div className=" flex relative">
                         <div className="absolute bottom-[-40px]">
                             <img src="https://framerusercontent.com/images/Pm9TTOkN341IYtePLdPGmhG0E.png" alt="temp-3" className="w-20 h-20 rounded-full object-contain" />

@@ -15,7 +15,6 @@ const ReviewCard = ({ category }: { category: string }) => {
                         description,
                         Trial,
                         features,
-                        specialComment,
                     } = item;
                     return (
                         <motion.div
@@ -27,7 +26,6 @@ const ReviewCard = ({ category }: { category: string }) => {
                             key={i}
                         >
                             <span className=" px-6 py-2 font-semibold rounded-full bg-[#F1F2F4] text-[#2E2E2E]">
-                                {" "}
                                 {header}
                             </span>
                             <p className="font-medium text-fadeBlack my-4">{title}</p>

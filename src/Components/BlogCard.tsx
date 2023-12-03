@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { BlogItemsType } from '../Types'
 import { useNavigate } from 'react-router-dom';
 

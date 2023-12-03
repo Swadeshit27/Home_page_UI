@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Subheader from './Subheader'
 import ReviewCard from './ReviewCard'
-import { animationControls, motion, useAnimationControls, Variants } from "framer-motion"
+import {  motion, useAnimationControls, } from "framer-motion"
 
 const Pricing = () => {
     const [category, setCategory] = useState("monthly")

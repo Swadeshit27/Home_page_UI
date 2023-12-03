@@ -1,4 +1,4 @@
-import { motion, Variants } from "framer-motion"
+import { motion} from "framer-motion"
 
 const Subheader = ({ title, subtitile }: { title: string, subtitile: string }) => {
     return (
@@ -9,7 +9,7 @@ const Subheader = ({ title, subtitile }: { title: string, subtitile: string }) =
                 transition={{
                     type: "spring",
                     bounce: 0.4,
-                    duration: 0.8
+                    duration: 0.5
                 }}
                 viewport={{ once: true, amount: 0.8 }}
                 className="w-auto mx-auto flex flex-col justify-center items-center" >
