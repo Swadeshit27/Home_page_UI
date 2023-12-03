@@ -29,7 +29,7 @@ export const Resources: FooterItemsType[] = [
   },
   {
     name: "Blog",
-    link: "/",
+    link: "/blog",
   },
   {
     name: "Contact",

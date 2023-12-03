@@ -1,4 +1,4 @@
-import { ZoomIn } from "../Utils/motion";
+import { DiscoverVariants } from "../Utils/motion";
 import { DiscoverItems } from "../assets/DiscoverItems";
 import Subheader from "./Subheader";
 import { motion, MotionConfig } from "framer-motion";
@@ -8,7 +8,7 @@ import { motion, MotionConfig } from "framer-motion";
 const Discover = () => {
     return (
         <>
-            <div className="w-full max-w-[1200px] mx-auto pt-20 p-6 ">
+            <div className="w-full max-w-[1200px] mx-auto pt-20 p-6 " >
                 <Subheader
                     title="Discover your new superpowers"
                     subtitile="Our main features 🦸🏼"
@@ -36,7 +36,7 @@ const Discover = () => {
                                         initial={"TextHidden"}
                                         whileInView={"TextShow"}
                                         viewport={{ once: true, amount: 0.4 }}
-                                        variants={ZoomIn}
+                                        variants={DiscoverVariants}
                                     >
                                         <span
                                             className={`px-4 py-2 font-semibold rounded-full ${subtitleBG} text-[#2E2E2E]`}
@@ -54,11 +54,11 @@ const Discover = () => {
                                         initial={"CommentHidden"}
                                         whileInView={"CommentShow"}
                                         viewport={{ once: true, amount: 0.4 }}
-                                        variants={ZoomIn}
+                                        variants={DiscoverVariants}
                                         className={`flex relative  ${isReverse ? " flex-row-reverse" : ""
                                             }`}
                                     >
-                                        <div className="absolute bottom-[-40px]">
+                                        <div className="absolute bottom-[-40px] -z-10">
                                             <img
                                                 src={imgSrc}
                                                 alt="temp-3"
@@ -66,9 +66,9 @@ const Discover = () => {
                                             />
                                         </div>
                                         <div
-                                            className={`w-[25rem] bg-[#2E2E2E] p-4 rounded-2xl  ${isReverse
-                                                    ? "rounded-br-none me-20"
-                                                    : "rounded-bl-none ms-20"
+                                            className={`w-[25rem] bg-[#2E2E2E] p-4 rounded-2xl -z-10  ${isReverse
+                                                ? "rounded-br-none me-20"
+                                                : "rounded-bl-none ms-20"
                                                 } `}
                                         >
                                             <h1 className=" max-sm:text-sm font-medium text-white">
@@ -84,8 +84,8 @@ const Discover = () => {
                                     initial={"PictureHidden"}
                                     whileInView={"PictureShow"}
                                     viewport={{ once: true, amount: 0.4 }}
-                                    variants={ZoomIn}
-                                    className="w-full sm:w-4/5 mx-auto lg:w-[50%] h-full"
+                                    variants={DiscoverVariants}
+                                    className="w-full sm:w-4/5 mx-auto lg:w-[50%] h-full -z-10"
                                 >
                                     <img src={imagePath} alt="template-2" />
                                 </motion.div>

@@ -1,8 +1,9 @@
-import { motion, Variants } from "framer-motion"
-const Header = ({ props }: { props: Variants }) => {
+import { motion } from "framer-motion"
+import { divVariants } from "../Utils/motion"
+const Header = () => {
     return (
         <>
-            <motion.div className="w-full max-w-[1200px] mx-auto h-full flex flex-col justify-center items-center " variants={props}>
+            <motion.div className="w-full max-w-[1200px] mx-auto h-full flex flex-col justify-center items-center " variants={divVariants}>
                 <div className=" w-[90%] sm:w-3/5 mx-auto flex flex-col justify-center items-center">
                     <span className=" px-4 py-1 font-semibold rounded-full bg-[#F1F2F4] text-[#2E2E2E]">An other way to manage time</span>
                     <h1 className=" text-4xl md:text-5xl lg:text-[4.5rem] lg:leading-[5rem] font-bold text-[#2E2E2E] text-center my-6">Your new favorite calendar 🗓️ app</h1>

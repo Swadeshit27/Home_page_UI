@@ -9,18 +9,20 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
     return (
         <>
-            <div className="w-full min-h-20 max-lg:h-auto lg:h-20 border-b fixed top-0  backdrop-blur-xl bg-[#fef9f6]">
+            <div className="w-full min-h-20 max-lg:h-auto lg:h-20 border-b fixed top-0  backdrop-blur-xl bg-[#fef9f6] z-50">
                 <div className="w-full max-w-[1300px] h-full max-lg:h-20 mx-auto flex justify-between items-center px-8">
-                    <div className="text-[#2E2E2E] font-semibold text-xl">
-                        <h1>Milton</h1>
-                    </div>
+
+                    <Link to={'/'}> <span className="text-[#2E2E2E] font-semibold text-xl cursor-pointer">Milton</span> </Link>
+
                     <ul className="flex max-lg:hidden">
                         {NavItems.map((item, i) => (
                             <li
                                 className="text-lg text-[rgb(107,107,120)] font-medium cursor-pointer hover:text-[#2E2E2E] hover:underline mx-4"
                                 key={i}
                             >
-                                <a href={item.link!}>{item.name}</a>
+                                {
+                                    item.href ? <a href={item.link!}>{item.name}</a> : <Link to={item.link}>{item.name}</Link>
+                                }
                             </li>
                         ))}
                     </ul>
@@ -38,7 +40,7 @@ const Navbar = () => {
                             Get started
                         </motion.button>
                     </div>
-                    <div className="flex lg:hidden " onClick={() => setOpen(!open)}>
+                    <div className="flex lg:hidden cursor-pointer " onClick={() => setOpen(!open)}>
                         {open ? <RxCross2 size={30} /> : <FiMenu size={30} />}
                     </div>
                 </div>
@@ -94,7 +96,7 @@ const Navbar = () => {
                                     },
                                 }}>
                                 <ul
-                                    className="  pb-4 text-center">
+                                    className="  pb-4 text-center bg-[#fef9f6] ">
                                     {NavItems.map((item, i) => (
                                         <li
                                             className="text-lg text-[rgb(107,107,120)] font-medium cursor-pointer hover:text-[#2E2E2E] hover:underline mx-4"

@@ -1,4 +1,6 @@
-export const ZoomIn = {
+import { Variants } from "framer-motion";
+
+export const DiscoverVariants = {
   PictureHidden: {
     scale: 0,
     rotate: "-60deg",
@@ -40,7 +42,7 @@ export const ZoomIn = {
   },
 };
 
-export const CardVariant = {
+export const CardVariant: Variants = {
   hidden: {
     y: 300,
     opacity: 0,
@@ -55,3 +57,16 @@ export const CardVariant = {
   },
 };
 
+export const divVariants: Variants = {
+  offscreen: {
+    y: 300,
+  },
+  onscreen: {
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};

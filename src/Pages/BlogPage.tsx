@@ -9,7 +9,7 @@ const BlogPage = () => {
     return (
         <>
             <div
-                className="w-full  h-[87vh] mt-20 overflow-y-scroll">
+                className="w-full  h-screen pt-20 overflow-y-scroll">
                 <Navbar />
                 <div className='w-full max-w-[1200px] mx-auto py-20 max-lg:p-6'>
                     <motion.div

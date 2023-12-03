@@ -37,39 +37,14 @@ const FaqSection = () => {
                                 <h1 className="font-semibold text-[16px] sm:text-xl text-black_primary">
                                     {question}
                                 </h1>
-                                <AnimatePresence initial={false} mode="wait">
-                                    <motion.div
-                                        key={open.status ? "open" : "closed"}
-                                        initial={{
-                                            rotate: open.status ? -90 : 90,
-                                        }}
-                                        animate={{
-                                            rotate: 0,
-                                            transition: {
-                                                type: "tween",
-                                                duration: 0.3,
-                                                ease: "circOut",
-                                            },
-                                        }}
-                                        exit={{
-                                            rotate: open.status ? -90 : 90,
-                                            transition: {
-                                                type: "tween",
-                                                duration: 0.3,
-                                                ease: "circIn",
-                                            },
-                                        }}
-                                    >
-                                        {open.status && open.id ? (
-                                            <FaCircleMinus className={"ms-2 text-2xl text-fadeBlack "} />
-                                        ) : (
-                                            <BsPlusCircleFill
-                                                size={25}
-                                                className={"ms-2 text-fadeBlack "}
-                                            />
-                                        )}
-                                    </motion.div>
-                                </AnimatePresence>
+                                {open.status && open.id == i ? (
+                                    <FaCircleMinus size={25} className={"ms-2 text-2xl text-fadeBlack "} />
+                                ) : (
+                                    <BsPlusCircleFill
+                                        size={25}
+                                        className={" min-w-[30px] ms-2 text-fadeBlack "}
+                                    />
+                                )}
                             </div>
                             <AnimatePresence mode="wait">
                                 {open.id == i && open.status && (
