@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Libre+Baskerville&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Dancing Script", cursive;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Poppins", sans-serif;
+  color-scheme: light dark;
+  background-color: #fef9f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.myAnimation {
+  animation: moveHorizontal 35s infinite linear;
+}
+@layer utilities {
+  .review_container:hover .paused {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes moveHorizontal {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
