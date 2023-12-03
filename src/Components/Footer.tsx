@@ -1,62 +1,10 @@
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { NavItems } from "../assets/NavItems";
-import { NavItemType } from "../Types";
+import { FromTheBlog, Others, Resources } from "../assets/FooterItems";
+import { Link } from "react-router-dom";
 
 
-const Others: NavItemType[] = [
-    {
-        name: "Privacy",
-        link: "/"
-    },
-    {
-        name: "Terms",
-        link: "/"
-    },
-    {
-        name: "Affiliation",
-        link: "/"
-    },
-    {
-        name: "Press",
-        link: "/"
-    },
-]
-const Resources: NavItemType[] = [
-    {
-        name: "Change log",
-        link: "/"
-    },
-    {
-        name: "Help center",
-        link: "/"
-    },
-    {
-        name: "Blog",
-        link: "/"
-    },
-    {
-        name: "Contact",
-        link: "/"
-    },
-]
-const FromTheBlog: NavItemType[] = [
-    {
-        name: "Mastering Your Schedule: Top Time Management Techniques for Balancing Work and Life",
-        link: "/"
-    },
-    {
-        name: "Organizing Your Calendar for Enhanced Productivity and Focus",
-        link: "/"
-    },
-    {
-        name: "The Power of Prioritization: Effective Strategies for Managing Your Time and Tasks",
-        link: "/"
-    },
-    {
-        name: "Maximizing Your Minutes: Essential Tips for Streamlining Your Daily Routine and Calendar",
-        link: "/"
-    },
-]
+
 
 
 const Footer = () => {
@@ -74,34 +22,34 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h1 className="text-xl font-semibold text-black_primary mb-4">Products</h1>
+                    <h1 className="sm:text-[16px] text-xl font-semibold text-black_primary mb-4">Products</h1>
                     <ul>
                         {
-                            NavItems.map((item, i) => i > 3 ? "" : <li key={i} className=" cursor-pointer my-2 text-fadeBlack hover:text-black hover:underline">{item.name}</li>)
+                            NavItems.map((item, i) => i > 3 ? "" : <li key={i} className=" max-sm:text-sm cursor-pointer my-2 text-fadeBlack hover:text-black hover:underline">{item.href ? <a href={item.link}>{item.name}</a> : <Link to={item.link}>{item.name}</Link>}</li>)
                         }
                     </ul>
                 </div>
                 <div>
-                    <h1 className="text-xl font-semibold text-black_primary mb-4">Resources</h1>
+                    <h1 className="sm:text-[16px] text-xl font-semibold text-black_primary mb-4">Resources</h1>
                     <ul>
                         {
-                            Resources.map((item, i) => <li key={i} className=" cursor-pointer my-2 text-fadeBlack hover:text-black hover:underline">{item.name}</li>)
+                            Resources.map((item, i) => <li key={i} className=" cursor-pointer my-2 text-fadeBlack hover:text-black hover:underline max-sm:text-sm"><Link to={item.link}>{item.name}</Link></li>)
                         }
                     </ul>
                 </div>
                 <div>
-                    <h1 className="text-xl font-semibold text-black_primary mb-4">Others</h1>
+                    <h1 className="text-xl font-semibold text-black_primary mb-4 sm:text-[16px]">Others</h1>
                     <ul>
                         {
-                            Others.map((item, i) => <li key={i} className=" cursor-pointer my-2 text-fadeBlack hover:text-black hover:underline">{item.name}</li>)
+                            Others.map((item, i) => <li key={i} className=" cursor-pointer my-2 text-fadeBlack hover:text-black hover:underline max-sm:text-sm"><Link to={item.link}>{item.name}</Link></li>)
                         }
                     </ul>
                 </div>
-                <div className="w-[20rem]">
-                    <h1 className="text-xl font-semibold text-black_primary mb-4">From the blog</h1>
+                <div className="max-sm:w-[18rem] w-[20rem]">
+                    <h1 className="text-xl font-semibold text-black_primary mb-4 sm:text-[16px]">From the blog</h1>
                     <ul>
                         {
-                            FromTheBlog.map((item, i) => <li key={i} className=" cursor-pointer my-2 text-fadeBlack hover:text-black hover:underline">{item.name}</li>)
+                            FromTheBlog.map((item, i) => <li key={i} className=" cursor-pointer my-2 text-fadeBlack hover:text-black hover:underline max-sm:text-sm"><Link to={item.link}>{item.name}</Link></li>)
                         }
                     </ul>
                 </div>

@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 const FeaturesCard = () => {
     return (
         <>
-            <div className="w-full p-6 max-w-[1200px] mx-auto pt-20 " id="features">
+            <div className="w-full p-6 max-w-[1200px] mx-auto pt-10 sm:pt-20 " id="features">
                 <Subheader title="Our features to make your life easier" subtitile="And so much more... 💼" />
                 <div className="flex my-12 max-lg:flex-col max-lg:justify-center  max-lg:items-center flex-wrap justify-between">
                     {
@@ -19,7 +19,7 @@ const FeaturesCard = () => {
                                     whileInView={"show"}
                                     viewport={{ once: true }}
                                     variants={CardVariant}
-                                    className=" w-[20rem] mx-auto sm:w-[23rem] h-[25rem] mb-16" key={i}>
+                                    className=" w-[18rem] mx-auto sm:w-[23rem] h-[25rem] mb-16" key={i}>
                                     <div className="w-full h-[15rem] bg-[#F1F2F4] rounded-2xl p-8">
                                         <img src={cardImage} alt="calender1" className="w-full object-contain h-full" />
                                     </div>

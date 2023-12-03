@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { AiFillHome } from "react-icons/ai";
 import { IoIosArrowForward } from "react-icons/io";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, useScroll } from "framer-motion";
 import { BlogItems } from "../assets/BlogItem";
 
@@ -11,7 +11,7 @@ const ParticularBlogPage = () => {
     const { pathname } = useLocation();
     const currentPostId = +pathname.split("/blog/")[1];
     const { scrollYProgress } = useScroll();
-    console.log(scrollYProgress)
+    const navigate = useNavigate();
     return (
         <>
             <div className="w-full  h-[87vh] mt-20" >
@@ -105,7 +105,7 @@ const ParticularBlogPage = () => {
                                                 Latest articles
                                             </h1>
                                             <div className="lg:flex justify-between cursor-pointer">
-                                                <div className="w-[22rem] sm:w-[27rem] h-[10rem] rounded-2xl overflow-hidden bg-white flex mb-8 max-lg:mx-auto">
+                                                <div className="w-[22rem] sm:w-[27rem] h-[10rem] rounded-2xl overflow-hidden bg-white flex mb-8 max-lg:mx-auto " onClick={() => navigate(`/blog/${BlogItems[0].id}`)}>
                                                     <img
                                                         src={BlogItems[0].postImage}
                                                         alt=""
@@ -121,17 +121,17 @@ const ParticularBlogPage = () => {
                                                         <p className="text-sm text-fadeBlack">{BlogItems[0].postTime}</p>
                                                     </div>
                                                 </div>
-                                                <div className="w-[27rem] h-[10rem] rounded-2xl overflow-hidden bg-white flex mb-8 max-lg:mx-auto">
+                                                <div className="w-[22rem] sm:w-[27rem] h-[10rem] rounded-2xl overflow-hidden bg-white flex mb-8 max-lg:mx-auto" onClick={() => navigate(`/blog/${BlogItems[1].id}`)}>
                                                     <img
                                                         src={BlogItems[1].postImage}
                                                         alt=""
-                                                        className="w-[10rem] h-full object-cover"
+                                                        className="w-[6rem] sm:w-[10rem] h-full object-cover"
                                                     />
                                                     <div className="p-4 ">
                                                         <p className="text-sm text-fadeBlack font-medium">
                                                             Resources
                                                         </p>
-                                                        <h1 className="text-[15px] leading-5 font-semibold my-3">
+                                                        <h1 className=" text-sm text-[15px] leading-5 font-semibold my-2 sm:my-3">
                                                             {BlogItems[1].title}
                                                         </h1>
                                                         <p className="text-sm text-fadeBlack">{BlogItems[1].postTime}</p>

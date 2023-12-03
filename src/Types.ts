@@ -1,6 +1,7 @@
 export interface NavItemType {
   name: string;
   link: string;
+  href: Boolean;
 }
 
 export interface DiscoverItemType {
@@ -50,4 +51,9 @@ export interface BlogItemsType {
     details: string;
   }[];
   topBottomDetails: string[];
+}
+
+export interface FooterItemsType {
+  name: string;
+  link: string;
 }

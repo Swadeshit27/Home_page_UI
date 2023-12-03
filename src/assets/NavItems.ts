@@ -1,24 +1,29 @@
 import { NavItemType } from "../Types";
 
 export const NavItems: NavItemType[] = [
-    {
-        name: "Feature",
-        link: "/#features"
-    },
-    {
-        name: "Testimonial",
-        link: "/#testimonial"
-    },
-    {
-        name: "Pricing",
-        link: "/#pricing"
-    },
-    {
-        name: "FAQs",
-        link: "/#faqs"
-    },
+  {
+    name: "Feature",
+    link: "/#features",
+    href: true,
+  },
+  {
+    name: "Testimonial",
+    link: "/#testimonial",
+    href: true,
+  },
+  {
+    name: "Pricing",
+    link: "/#pricing",
+    href: true,
+  },
+  {
+    name: "FAQs",
+    link: "/#faqs",
+    href: true,
+  },
     {
         name: "Blog",
-        link: "/blog"
-    },
-]
+        link: "/blog",
+        href: false,
+  },
+];

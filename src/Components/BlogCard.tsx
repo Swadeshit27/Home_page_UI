@@ -1,14 +1,20 @@
 
 import { BlogItemsType } from '../Types'
 import { useNavigate } from 'react-router-dom';
-
+import { motion } from 'framer-motion'
+import { CardVariant } from '../Utils/motion';
 
 const BlogCard = ({ props }: { props: BlogItemsType }) => {
     const { id, title, postImage, description, postUserImage, postUserName, postTime } = props;
     const navigate = useNavigate();
     return (
         <>
-            <div className='w-[24rem] min-h-[20rem] cursor-pointer mb-6 sm:me-4 ' key={id} onClick={() => navigate(`/blog/${id}`)}>
+            <motion.div
+                initial={"hidden"}
+                whileInView={"show"}
+                viewport={{ once: true }}
+                variants={CardVariant}
+                className='w-[24rem] min-h-[20rem] cursor-pointer mb-6 sm:me-4 ' key={id} onClick={() => navigate(`/blog/${id}`)}>
                 <div className='w-full h-[15rem] rounded-2xl overflow-hidden '>
                     <img src={postImage} alt="template" className='w-full h-full object-cover' />
                 </div>
@@ -21,7 +27,7 @@ const BlogCard = ({ props }: { props: BlogItemsType }) => {
                     <p className=' text-fadeBlack font-medium max-sm:text-sm'>{postTime}</p>
                 </div>
                 <h4 className='text-fadeBlack my-4 max-sm:text-[16px]'>{description}</h4>
-            </div>
+            </motion.div>
         </>
     )
 }

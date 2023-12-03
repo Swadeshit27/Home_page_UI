@@ -46,7 +46,7 @@ const Discover = () => {
                                         <h1 className="text-3xl sm:text-5xl  font-semibold text-[#2E2E2E] my-4">
                                             {title}
                                         </h1>
-                                        <p className="text-lg sm:text-xl leading-8 font-medium my-12 text-[rgb(107,107,120)]">
+                                        <p className="text-[16px] sm:text-xl sm:leading-8 font-medium my-6 sm:my-12 text-[rgb(107,107,120)]">
                                             {description}
                                         </p>
                                     </motion.div>
@@ -71,10 +71,10 @@ const Discover = () => {
                                                     : "rounded-bl-none ms-20"
                                                 } `}
                                         >
-                                            <h1 className=" font-medium text-white">
+                                            <h1 className=" max-sm:text-sm font-medium text-white">
                                                 {commentDescription}
                                             </h1>
-                                            <h2 className=" font-medium text-[#90909E]">
+                                            <h2 className="max-sm:text-sm font-medium text-[#90909E]">
                                                 {userDetails}
                                             </h2>
                                         </div>
